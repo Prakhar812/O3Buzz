@@ -10,56 +10,73 @@ html,
 body {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
-
+#crsr{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    border: 1.1px solid #ffffff61;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+}
+#crsr:hover{
+    height: 3.5vw;
+    width: 3.5vw;
+    transition-delay: 100;
+}
 #loader{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 999;
     background-color: #030303; 
-    padding: 25vh 10vw;
+    padding: 16vh 10vw;
+    overflow: hidden;
 }
 #line{
-    /* background-color: red; */
     height: fit-content;
     overflow:hidden ; 
     display: flex;
     align-items: center;
-    justify-content: flex-start ;
+    justify-content: left ;
     gap: 3vw;
 } 
 
-#line1-part1{
+#countdown{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1vw;
+    
 }
-#line1-part1 h5,#line1-part1 h6{
-    font-size: 3vw; 
+#countdown h5,#countdown h6{
+    font-size: 4vw; 
     font-weight: 100;
     font-family: "silk serif";
 }
-#line1-part1 h5{
-    width: 5vw;
+#countdown h5{
+    width: 6vw;
     text-align: right;
 }
 
 #line h1{
-    font-size: 6.5vw;
+    font-size: 6.7vw;
     text-transform: uppercase;
     font-weight: 900;
+    
 }
 #line h2{
-    font-size: 5vw ;
+    font-size: 5.2vw ;
     text-transform: uppercase;
     font-weight: 900;
     /* animation: anime 2 timing-function delay infinite direction fill-mode; */
     animation-name: anime;
     /* opacity: 0; */
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-iteration-count: 4;    
 }
 
 @keyframes anime{
@@ -91,12 +108,8 @@ body {
         color: transparent;
         font-weight:500 ;
         opacity: 0;
-    }
+    }  
 }
-
-
-
-
 
 #main{
     position: relative;
@@ -107,5 +120,56 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #151515;
+}
+
+#nav-logo{
+    width: 7vw;
+    object-fit: cover; 
+}
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 5vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 3vw;
+
+}
+
+#nav-part2 h4{
+        font-size: 0.9vw;
+        font-weight: 500;
+}
+
+#hero , #hero3{
+    width: 72%;
+    margin-left: 27%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    position: relative;
+}
+
+#hero:nth-child(2){
+    margin-top: 15vh;
+}
+#hero h1, h2, h3{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    font-weight: 599;
+}
+
+
+#hero3 h2:hover{
+    -webkit-text-stroke:2px #fff ;
+    color: transparent;
+    font-weight: 400;
 }
 
