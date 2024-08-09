@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>O3Buzz Agency</title>
     <link rel="shortcut icon" href="./favicon (o).png" type="image/x-icon" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="crsr"></div>
+    <div id="crsr" data-scroll-ignore></div>
     <div id="loader">
       <div id="line">
         <div id="countdown">
@@ -26,52 +29,133 @@
         <h2>NOW</h2>
       </div>
     </div>
+          
     <div id="main">
-      <div id="page1">
+      <div id="page1" data-scroll data-scroll-speed="1">
         <div id="nav">
-          <img
-            id="nav-logo"
-            src="./Assests/logo o3buzz white.png"
-            alt="o3buzz"
-          />
+          <img id="nav-logo" src="./Assests/logo o3buzz white.png" alt="o3buzz" />
           <div id="nav-part2">
             <h4>Works</h4>
             <h4>About</h4>
             <h4>Contacts</h4>
           </div>
         </div>
-        <div id="hero" id="hero1">
+        <!-- <div id="page5"></div> -->
+        <div class="hero" id="hero1">
           <h1>We Design</h1>
         </div>
-        <div id="hero" id="hero2">
+        <div class="hero" id="hero2">
           <h1>Unique</h1>
         </div>
-        <div class ="hero" id="hero3" >
+        <div class="hero" id="hero3">
           <h2>web</h2>
           <h2>/</h3>
           <h2>graphic</h2>
         </div>
-        <div id="hero" id="hero4">
+        <div class="hero" id="hero4">
           <h1>experience</h1>
         </div>
       </div>
-      <div id="page2"></div>
-      <div id="page3"></div>
-    </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+      <div id="page2" data-scroll data-scroll-speed="-1.5">
+        <div id="video-container">
+          <div id="video-cursor">
+            <i class="ri-play-mini-fill"></i>
+          </div>
+          <img src="./Assests/video thumbnail.jpg" alt="o3buzz thumbnail">
+          <video loop muted src="./Assests/o3buzz.mp4"></video>
+        </div>
+      </div>
+
+      <div id="page3" data-scroll>
+      </div>
+
+      <div id="page4" data-scroll>
+        <div id="page4-content">
+          <h1>About O3Buzz</h1>
+          <div class="underline"></div>
+          <p>Our agency is about Overdelivering , Outthiking designing and developing wow projects.</p>
+          <div id="page4_flex">
+            <img src="./Assests/Owners image.jpg" alt="Agency Owner's image">
+            <p>We are happy to present our new and updated website <br><br> ohhh yeess </p>
+          </div>
+          <div id="page4-bluediv">
+            <div class="blue-div-elem">
+              <h4>awwwwards</h4>
+              <p>Honorable mentions</p>
+            </div>
+            <div class="blue-div-elem">
+              <h4>awwwwards</h4>
+              <p>Honorable mentions</p>
+            </div>
+            <div class="blue-div-elem">
+              <h4>awwwwards</h4>
+              <p>Honorable mentions</p>
+            </div>
+            <div class="blue-div-elem">
+              <h4>awwwwards</h4>
+              <p>Honorable mentions</p>
+            </div>
+            <div class="blue-div-elem">
+              <h4>awwwwards</h4>
+              <p>Honorable mentions</p>
+            </div>
+          </div>
+          <div class="underline"></div>
+        </div>
+      </div>
+
+      <div id="page5" data-scroll>
+
+        <div class="elem">
+          <h1><span>Sport</span> - Fashion - Technology -</h1>
+          <h1><span>Sport</span> - Fashion - Technology -</h1>
+        </div>
+        
+        <div class="elem2">
+          <h1>Science - <span>Partners</span> - Travel -</h1>
+          <h1>Science - <span>Partners</span> - Travel -</h1>
+        </div>
+
+        <div class="elem">
+          <h1>Sport - Fashion - <span>Technology</span> -</h1>
+          <h1>Sport - Fashion - <span>Technology</span> -</h1>
+        </div>
+        
+        <div class="elem2">
+          <h1><span>Science</span> - Partners - Travel -</h1>
+          <h1><span>Science</span> - Partners - Travel -</h1>
+        </div>
+        
+      </div>
+
+      <div id="footer" data-scroll>
+        <h1>Let's create</h1>
+        <div class="underline"></div>
+        <div id="footer-div">
+          <div class="box">
+            <h6>Social</h6>
+            <h5>instagram</h5>
+            <h5>youtube</h5>
+          </div>
+          <div class="box">
+              <h6>Address</h6>
+              <h5>india</h5>
+              <h5>dehli</h5>
+          </div>
+          <div class="box">
+              <h6>say hi</h6>
+              <h5>o3buzz@gmia.com</h5>
+          </div>
+        </div>
+        <div class="underline"></div>
+        <h5>O3Buzz Agency©️2024</h5>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
     <script src="script.js"></script>
   </body>
 </html>

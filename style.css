@@ -10,7 +10,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    
 }
 #crsr{
     height: 2.5vw;
@@ -18,20 +18,21 @@ body {
     border-radius: 50%;
     border: 1.1px solid #ffffff61;
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
+    pointer-events: none;
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);
 }
-#crsr:hover{
+/* #crsr:hover{
     height: 3.5vw;
     width: 3.5vw;
     transition-delay: 100;
-}
+} */
 #loader{
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     background-color: #030303; 
     padding: 16vh 10vw;
     overflow: hidden;
@@ -113,9 +114,11 @@ body {
 
 #main{
     position: relative;
-    background-color: #030303;
+    background-color: #151515;
+    overflow: hidden;
 }
 
+/* -------------------------------------page1------------------------------------- */
 #page1{
     height: 100vh;
     width: 100%;
@@ -131,6 +134,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1vw 5vw;
+    z-index: 998;
 }
 #nav-part2{
     display: flex;
@@ -145,31 +149,333 @@ body {
         font-weight: 500;
 }
 
-#hero , #hero3{
+
+.hero{
     width: 72%;
     margin-left: 27%;
     height: fit-content;
-    overflow: hidden;
+    /* overflow: hidden;  */
     display: flex;
     align-items: center;
-    z-index: 9999;
-    position: relative;
 }
 
-#hero:nth-child(2){
+
+
+.hero:nth-child(2){
     margin-top: 15vh;
 }
-#hero h1, h2, h3{
+
+#hero1{
+    position: relative;
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    font-weight: 599;
+}
+#hero1 ::before {
+    overflow: visible;
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -10%;
+    top: -15%; 
+
+}
+
+
+.hero h1, .hero h2, .hero h3{
     font-size: 7.5vw;
     text-transform: uppercase;
     line-height: 7.2vw;
     font-weight: 599;
 }
 
-
-#hero3 h2:hover{
-    -webkit-text-stroke:2px #fff ;
-    color: transparent;
-    font-weight: 400;
+#hero3 h2{
+    border-bottom: 0.5vw solid #fff;
+    padding-bottom: 0.8vw;
+    transition: all ease 0.4;
 }
 
+#hero3 h2:hover{
+    -webkit-text-stroke:1px #fff ;
+    color: transparent;
+    font-weight: 400;
+    border-bottom: 0.5vw solid #ffffff00;
+}
+
+/* -------------------------------------page2------------------------------------- */
+#page2{
+    /* margin-top: 50vw; */
+    height: 100vh;
+    width: 100%;
+    padding-top:17vh ;
+    position: relative;
+    overflow: hidden;
+}
+
+#video-container{
+    
+    height: 70vh;
+    width: 71vw;
+    position: relative;
+    left: 29%;
+    
+   
+    
+    
+}
+#video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+
+#video-cursor{
+    background-color: #FFA63D;
+    height: 8.5vw;
+    width: 8.5vw;
+    position: absolute;
+    border-radius: 50%;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 997;
+
+}
+#video-cursor i{
+    font-size: 2vw;
+    z-index: 998;
+}
+
+
+/* -------------------------------------page3------------------------------------- */
+
+#page3{
+    min-height: 100vh;
+    width:100%;
+    background-color: rgb(105, 103, 103);
+    position: relative;
+}
+
+/* -------------------------------------page4------------------------------------- */
+
+#page4{
+    min-height: 100vh;
+    width:100%;
+    position: relative;
+    padding: 7vh 0;
+}
+
+#page4-content{
+    width:72vw;
+    margin-left: 28%;
+    position: relative;
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+
+}
+
+#page4-content .underline{
+    height: 1.5px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+/*---------------------------------- importanttttt */
+#page4-content >p{
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+
+}
+#page4_flex {
+    display: flex;
+   
+}
+
+#page4_flex img{
+   width: 48%;
+
+}
+#page4_flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+
+}
+#page4-bluediv{
+    background-color: #3f7df4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+
+}
+.blue-div-elem {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5vw 0;
+    border-bottom: 2px solid #ffffff90;
+ }
+
+.blue-div-elem h4{
+    font-size: 1.4vw;
+    font-weight: 500;
+ }
+
+.blue-div-elem p{
+    width: 50%;
+    font-size: 0.7vw;
+}
+
+/* ---------------- page 5 ------------ */
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+
+}
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent ;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: marquee;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes marquee{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+
+}
+
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent ;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: translateX(calc(-100% - 20px));
+    margin-right: 16px;
+    animation-name: marquee;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.elem span,
+.elem2 span{
+    font-family: "silk serif";
+    color: transparent;
+    font-style: italic;
+}
+
+/* ---------------------footer---------------------- */
+
+#footer{
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+}
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+
+}
+
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    /* margin: 0.2vh 0; */
+}
+
+#footer > h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
